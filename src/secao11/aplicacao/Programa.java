@@ -1,4 +1,4 @@
-package aula11.aplicacao;
+package secao11.aplicacao;
 
 import secao11.xadrez.PartidaXadrez;
 
