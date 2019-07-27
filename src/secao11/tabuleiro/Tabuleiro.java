@@ -7,7 +7,7 @@ public class Tabuleiro {
 	private Peca[][] pecas;
 	
 	public Tabuleiro(int linhas, int colunas) {
-		if (this.linhas < 1 || this.colunas< 1) {
+		if (linhas < 1 || colunas< 1) {
 			throw new TabuleiroException("Erro ao criar tabuleiro!! Deve ser informado pelo menos 1 linha e 1 coluna!!");
 		}
 		
