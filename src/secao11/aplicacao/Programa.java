@@ -18,11 +18,11 @@ public class Programa {
 				UserInterface.limpaTela();
 				UserInterface.imprimeTabuleiro(partidaXadrez.getPecas());
 				System.out.println();
-				System.out.print("Posição Origem: ");
+				System.out.print("Origem: ");
 				PosicaoXadrez origem = UserInterface.lePosicaoXadrez(sc);
 				
 				System.out.println();
-				System.out.print("Posição Destino: ");
+				System.out.print("Destino: ");
 				PosicaoXadrez destino = UserInterface.lePosicaoXadrez(sc);
 				
 				PecaXadrez pecaCapturada = partidaXadrez.realizaMovimentoXadrez(origem, destino);

@@ -30,6 +30,7 @@ public class PartidaXadrez {
 		Posicao origem = posicaoOrigem.paraPosicao();
 		Posicao destino = posicaoDestino.paraPosicao();
 		validaPosicaoOrigem(origem);
+		validaPosicaoDestino(origem, destino);
 		Peca pecaCapturada = realizaMovimento(origem, destino);
 		return (PecaXadrez)pecaCapturada;
 	}
@@ -51,27 +52,24 @@ public class PartidaXadrez {
 		}
 	}
 	
+	private void validaPosicaoDestino(Posicao origem, Posicao destino) {
+		if(!tabuleiro.peca(origem).movimentoPossivel(destino)) {
+			throw new XadrezException("A peça não pode ser movida para a posição de destino!");
+		}
+	}	
+	
 	private void lugarNovaPeca(char coluna, int linha, PecaXadrez peca) {
 		tabuleiro.colocaPeca(peca, new PosicaoXadrez(coluna, linha).paraPosicao());
 		
 	}
 	
 	public void setupInicial() {
-		lugarNovaPeca('b', 6, new Torre(tabuleiro, Cor.BRANCO));
-
-		lugarNovaPeca('c', 1, new Torre(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('c', 2, new Torre(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('c', 7, new Torre(tabuleiro, Cor.PRETO));
 		lugarNovaPeca('c', 8, new Torre(tabuleiro, Cor.PRETO));
-
-		lugarNovaPeca('d', 2, new Torre(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('d', 1, new Rei(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('d', 7, new Torre(tabuleiro, Cor.PRETO));
 		lugarNovaPeca('d', 8, new Rei(tabuleiro, Cor.PRETO));
-		
-		lugarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('e', 2, new Torre(tabuleiro, Cor.BRANCO));
-		lugarNovaPeca('e', 7, new Torre(tabuleiro, Cor.PRETO));
 		lugarNovaPeca('e', 8, new Torre(tabuleiro, Cor.PRETO));
+		
+		lugarNovaPeca('c', 1, new Torre(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('d', 1, new Rei(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('e', 1, new Torre(tabuleiro, Cor.BRANCO));
 	}
 }
