@@ -3,7 +3,7 @@ package secao11.xadrez;
 import secao11.tabuleiro.Peca;
 import secao11.tabuleiro.Tabuleiro;
 
-public class PecaXadrez extends Peca{
+public abstract class PecaXadrez extends Peca{
 	
 	private Cor cor;
 
