@@ -30,49 +30,49 @@ public class Rei extends PecaXadrez{
 		//Acima 
 		p.setValues(posicao.getLinha() -1, posicao.getColuna());
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Abaixo 
 		p.setValues(posicao.getLinha() +1, posicao.getColuna());
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Esquerda 
 		p.setValues(posicao.getLinha(), posicao.getColuna() - 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Direita 
 		p.setValues(posicao.getLinha(), posicao.getColuna() + 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Sudeste 
 		p.setValues(posicao.getLinha() + 1, posicao.getColuna() + 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Sudoeste 
 		p.setValues(posicao.getLinha() + 1, posicao.getColuna() - 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
 		//Nordeste 
 		p.setValues(posicao.getLinha() - 1, posicao.getColuna() - 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}								
 		
 		//Noroeste 
 		p.setValues(posicao.getLinha() - 1, posicao.getColuna() + 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
-			matriz[posicao.getLinha()][posicao.getColuna()] = true;
+			matriz[p.getLinha()][p.getColuna()] = true;
 		}		
 		
 		return matriz;
