@@ -100,18 +100,18 @@ public class UserInterface {
 	}
 	
 	private static void imprimePecasCapturadas(List<PecaXadrez> capturadas) {
-		List<PecaXadrez> brancas = capturadas.stream().filter(peca -> peca.getCor() == Cor.BRANCO).collect(Collectors.toList());
-		List<PecaXadrez> pretas = capturadas.stream().filter(peca -> peca.getCor() == Cor.PRETO).collect(Collectors.toList());
+		List<PecaXadrez> brancas = capturadas.stream().filter(x -> x.getCor() == Cor.BRANCO).collect(Collectors.toList());
+		List<PecaXadrez> pretas = capturadas.stream().filter(x -> x.getCor() == Cor.PRETO).collect(Collectors.toList());
 		
-		System.out.println("Peças Capturadas: ");
+		System.out.println("Itens Capturados: ");
 		System.out.print("Branca:");
 		System.out.print(ANSI_WHITE);
-		System.out.print(Arrays.toString(brancas.toArray()));
+		System.out.println(Arrays.toString(brancas.toArray()));
 		System.out.print(ANSI_RESET);		
 		
 		System.out.print("Preta:");
-		System.out.print(ANSI_BLACK);
-		System.out.print(Arrays.toString(pretas.toArray()));
+		System.out.print(ANSI_YELLOW);
+		System.out.println(Arrays.toString(pretas.toArray()));
 		System.out.print(ANSI_RESET);		
 	}
 }
