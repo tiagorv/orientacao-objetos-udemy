@@ -58,6 +58,10 @@ public class UserInterface {
 		System.out.println();
 		System.out.println("Jogada : " + partidaXadrez.getJogada());
 		System.out.println("Aguardando Jogador: " + partidaXadrez.getJogadorAtual());
+		
+		if (partidaXadrez.isXeque()) {
+			System.out.println("XEQUE!!!");
+		}
 	}
 	
 	public static void imprimeTabuleiro(PecaXadrez[][] pecas, boolean[][] movimentosPossiveis) {
