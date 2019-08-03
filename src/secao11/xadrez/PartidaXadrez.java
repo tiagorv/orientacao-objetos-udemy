@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import secao11.tabuleiro.Peca;
 import secao11.tabuleiro.Posicao;
 import secao11.tabuleiro.Tabuleiro;
+import secao11.xadrez.pecas.Peao;
 import secao11.xadrez.pecas.Rei;
 import secao11.xadrez.pecas.Torre;
 
@@ -198,8 +199,25 @@ public class PartidaXadrez {
 		lugarNovaPeca('h', 7, new Torre(tabuleiro, Cor.BRANCO));
 		lugarNovaPeca('d', 1, new Torre(tabuleiro, Cor.BRANCO));
 		lugarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('a', 2, new Peao(tabuleiro, Cor.BRANCO));		
+		lugarNovaPeca('b', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('c', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('d', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('e', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('f', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('g', 2, new Peao(tabuleiro, Cor.BRANCO));
+		lugarNovaPeca('h', 2, new Peao(tabuleiro, Cor.BRANCO));
 		
-		lugarNovaPeca('b', 8, new Torre(tabuleiro, Cor.PRETO));
-		lugarNovaPeca('a', 8, new Rei(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('a', 8, new Torre(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('h', 8, new Torre(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('a', 7, new Peao(tabuleiro, Cor.PRETO));		
+		lugarNovaPeca('b', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('c', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('d', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('e', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('f', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('g', 7, new Peao(tabuleiro, Cor.PRETO));
+		lugarNovaPeca('h', 7, new Peao(tabuleiro, Cor.PRETO));
 	}
 }
