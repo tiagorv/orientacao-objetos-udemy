@@ -27,50 +27,42 @@ public class Cavalo extends PecaXadrez{
 		
 		Posicao p = new Posicao(0,0);
 		
-		//Acima 
-		p.setValues(posicao.getLinha() -1, posicao.getColuna());
+		p.setValues(posicao.getLinha() -1, posicao.getColuna() -2);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Abaixo 
-		p.setValues(posicao.getLinha() +1, posicao.getColuna());
+		p.setValues(posicao.getLinha() -2, posicao.getColuna() -1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Esquerda 
-		p.setValues(posicao.getLinha(), posicao.getColuna() - 1);
+		p.setValues(posicao.getLinha() -2, posicao.getColuna() + 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Direita 
-		p.setValues(posicao.getLinha(), posicao.getColuna() + 1);
+		p.setValues(posicao.getLinha() -1, posicao.getColuna() + 2);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Sudeste 
-		p.setValues(posicao.getLinha() + 1, posicao.getColuna() + 1);
+		p.setValues(posicao.getLinha() + 1, posicao.getColuna() + 2);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Sudoeste 
-		p.setValues(posicao.getLinha() + 1, posicao.getColuna() - 1);
+		p.setValues(posicao.getLinha() + 2, posicao.getColuna() + 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}
 		
-		//Nordeste 
-		p.setValues(posicao.getLinha() - 1, posicao.getColuna() - 1);
+		p.setValues(posicao.getLinha() + 2, posicao.getColuna() - 1);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}								
 		
-		//Noroeste 
-		p.setValues(posicao.getLinha() - 1, posicao.getColuna() + 1);
+		p.setValues(posicao.getLinha() + 1, posicao.getColuna() - 2);
 		if (getTabuleiro().posicaoExiste(p) && podeMover(p)) {
 			matriz[p.getLinha()][p.getColuna()] = true;
 		}		
