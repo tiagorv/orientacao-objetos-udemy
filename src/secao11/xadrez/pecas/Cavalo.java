@@ -5,15 +5,15 @@ import secao11.tabuleiro.Tabuleiro;
 import secao11.xadrez.Cor;
 import secao11.xadrez.PecaXadrez;
 
-public class Rei extends PecaXadrez{
-
-	public Rei(Tabuleiro tabuleiro, Cor cor) {
+public class Cavalo extends PecaXadrez{
+	
+	public Cavalo(Tabuleiro tabuleiro, Cor cor) {
 		super(tabuleiro, cor);
 	}
 	
 	@Override
 	public String toString() {
-		return "R";
+		return "C";
 	}
 	
 	public boolean podeMover(Posicao posicao) {
@@ -76,5 +76,5 @@ public class Rei extends PecaXadrez{
 		}		
 		
 		return matriz;
-	}
+	}	
 }
