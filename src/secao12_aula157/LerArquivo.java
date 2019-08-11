@@ -15,8 +15,7 @@ public class LerArquivo {
 				System.out.println(sc.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("Erro leitura de arquivo: ");
-			e.printStackTrace();
+			System.out.println("Erro leitura de arquivo: " + e.getMessage());
 		}finally {
 			if (sc != null) {
 				sc.close();
